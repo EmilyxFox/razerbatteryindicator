@@ -1,0 +1,46 @@
+{
+	"Name": "Razer Battery Indicator",
+	"Version": "0.1.0",
+	"Author": "comfycastle",
+	"Actions": [
+		{
+			"Name": "Battery Indicator",
+			"UUID": "dk.comfycastle.razerbatteryindicator.battery",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Displays the current battery percentage of your Razer device.",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "Razer Battery Indicator",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "This plugin displays the current battery percentage of your Razer devices, and whether they are currently charging.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.5"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.15"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "dk.comfycastle.razerbatteryindicator"
+}
