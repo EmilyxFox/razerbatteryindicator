@@ -4,6 +4,7 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import path from "node:path";
 import url from "node:url";
+import copy from "rollup-plugin-copy";
 
 const isWatching = !!process.env.ROLLUP_WATCH;
 const sdPlugin = "dk.comfycastle.razerbatteryindicator.sdPlugin";
@@ -42,7 +43,28 @@ const config = {
 			generateBundle() {
 				this.emitFile({ fileName: "package.json", source: `{ "type": "module" }`, type: "asset" });
 			}
-		}
+		},
+		copy({
+			copyOnce: true,
+			targets: [
+				{
+					src: 'node_modules/usb/',
+					dest: 'dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules'
+				},
+				{
+					src: 'node_modules/node-gyp-build',
+					dest: 'dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules'
+				},
+				{
+					src: 'node_modules/node-addon-api',
+					dest: 'dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules'
+				},
+				{
+					src: 'node_modules/.bin',
+					dest: 'dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules'
+				}
+			]
+		})
 	]
 };
 
