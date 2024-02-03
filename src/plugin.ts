@@ -1,5 +1,4 @@
 import streamDeck, { LogLevel } from "@elgato/streamdeck";
-
 import { BatteryIndicator } from "./actions/battery";
 
 // We can enable "trace" logging so that all messages between the Stream Deck, and the plugin are recorded. When storing sensitive information

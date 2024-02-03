@@ -40,7 +40,7 @@
 	],
 	"Nodejs": {
 		"Version": "20",
-		"Debug": "enabled"
+		"Debug": "break"
 	},
 	"UUID": "dk.comfycastle.razerbatteryindicator"
 }

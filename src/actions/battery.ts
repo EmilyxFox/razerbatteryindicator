@@ -1,5 +1,5 @@
 import { KeyUpEvent, SingletonAction, WillAppearEvent, action } from "@elgato/streamdeck";
-import { getDeviceList } from 'usb';
+import { getDeviceList } from 'usb'
 
 @action({ UUID: "dk.comfycastle.razerbatteryindicator.battery" })
 export class BatteryIndicator extends SingletonAction {
@@ -10,6 +10,7 @@ export class BatteryIndicator extends SingletonAction {
 	onKeyUp(ev: KeyUpEvent<object>): void | Promise<void> {
 		console.log('click')
 		console.log(getDeviceList())
+
 
 
 		// const devices: usb.Device[] = getDeviceList();
