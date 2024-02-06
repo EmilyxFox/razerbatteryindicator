@@ -48,28 +48,29 @@ const config = {
 				this.emitFile({ fileName: "package.json", source: `{ "type": "module" }`, type: "asset" });
 			}
 		},
-        // copy({
-        //     copyOnce: true,
-        //     targets: [
-        //         {
-        //             src: "node_modules/usb/",
-        //             dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
-        //         },
-        //         {
-        //             src: "node_modules/node-gyp-build",
-        //             dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
-        //         },
-        //         {
-        //             src: "node_modules/node-addon-api",
-        //             dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
-        //         },
-        //         {
-        //             src: "node_modules/.bin",
-        //             dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
-        //         },
-        //     ],
-        // }),
+        copy({
+            copyOnce: true,
+            targets: [
+                {
+                    src: "node_modules/usb/",
+                    dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
+                },
+                {
+                    src: "node_modules/node-gyp-build",
+                    dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
+                },
+                {
+                    src: "node_modules/node-addon-api",
+                    dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
+                },
+                {
+                    src: "node_modules/.bin",
+                    dest: "dk.comfycastle.razerbatteryindicator.sdPlugin/bin/node_modules",
+                },
+            ],
+        }),
     ],
+	external: ['usb', 'node-gyp-build', 'node-addon-api']
 };
 
 export default config;

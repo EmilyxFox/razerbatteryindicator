@@ -12,7 +12,7 @@
 		"@rollup/plugin-terser": "^0.4.4",
 		"@rollup/plugin-typescript": "^11.1.5",
 		"@tsconfig/node20": "^20.1.2",
-		"@types/node": "20.8.10",
+		"@types/node": "^20.11.16",
 		"rollup": "^4.0.2",
 		"rollup-plugin-copy": "^3.5.0",
 		"tslib": "^2.6.2",
@@ -20,6 +20,7 @@
 	},
 	"dependencies": {
 		"@elgato/streamdeck": "^0.2.0",
+		"svg-builder": "^2.0.0",
 		"usb": "^2.11.0"
 	}
 }
